@@ -8,14 +8,14 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, IInput> = (
   ref
 ) => {
   return (
-    <div className=" w-full">
+    <div className="w-full">
       <input
         type={type}
         placeholder={placeholder}
         ref={ref}
         {...rest}
         className="px-3 py-2 bg-gray-950 rounded-md w-full"
-      ></input>
+      />
     </div>
   );
 };

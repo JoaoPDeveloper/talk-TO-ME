@@ -11,24 +11,24 @@ export default function Footer() {
   const hours = date.getHours().toString().padStart(2, "0") + ":";
   const minutes = date.getMinutes().toString().padStart(2, "0");
   return (
-    <div className="fixed bottom-0 bg-black py-6 w-full">
+    <div className="fixed items-center bottom-0 bg-black py-6 w-full">
       <Container>
         <div className="grid grid-cols-3 ">
           <div className="flex items-center">
-            <p className="text-xl ">
+            <p className="text-xl">
               {hours}
               {minutes}
             </p>
           </div>
-          <div className="flex space-x-6 justify-center">
+          <div className="flex space-x-6 justify-center ">
             {isMuted ? (
               <NoMic
-                className="h-12 w-16 text-white p-2 cursor-pointer bg-red-500 rounded-md"
+                className="h-12 w-16 text-white p-2 cursor-pointer bg-red-500  rounded-md"
                 onClick={() => setIsMuted(!isMuted)}
               />
             ) : (
               <Mic
-                className="h-12 w-16 text-white p-2 cursor-pointer bg-gray-950 rounded-md"
+                className="h-12 w-16 text-white p-2 cursor-pointer bg-gray-950  rounded-md"
                 onClick={() => setIsMuted(!isMuted)}
               />
             )}
@@ -43,13 +43,19 @@ export default function Footer() {
                 onClick={() => setIsCameraOff(!isCameraOff)}
               />
             )}
+
             {isScreenSharing ? (
-             <NoDesk className="h-12 w-16 text-white p-2 cursor-pointer bg-red-500 rounded-md" 
-             onClick={() => setIsScreenSharing(!isScreenSharing)}/>
-            ):(
-             <Computer className="h-12 w-16 text-white p-2 cursor-pointer bg-gray-950 rounded-md" 
-             onClick={() => setIsScreenSharing(!isScreenSharing)}/>             
+              <NoDesk
+                className="h-12 w-16 text-white p-2 cursor-pointer bg-red-500 rounded-md"
+                onClick={() => setIsScreenSharing(!isScreenSharing)}
+              />
+            ) : (
+              <Computer
+                className="h-12 w-16 text-white p-2 cursor-pointer bg-gray-950 rounded-md"
+                onClick={() => setIsScreenSharing(!isScreenSharing)}
+              />
             )}
+
             <Phone className="h-12 w-16 text-white hover:bg-red-500 p-2 cursor-pointer bg-primary rounded-md" />
           </div>
         </div>
