@@ -1,0 +1,10 @@
+export { default as Cam } from "./Cam";
+export { default as Computer } from "./Computer";
+export { default as Hero } from "./Hero";
+export { default as Logo } from "./Logo";
+export { default as Mic } from "./Mic";
+export { default as NoCamera } from "./NoCamera";
+export { default as NoDesk } from "./NoDesk";
+export { default as NoMic } from "./NoMic";
+export { default as Phone } from "./Phone";
+export { default as Send } from "./Send";
